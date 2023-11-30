@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
    
     $sql = "INSERT INTO contacts (surname, forename, contact) VALUES ('$name', '$fname', '$contact')";
-    
+    mysqli_query($conn, $sql);
     
     echo "Data received: Surname - $name, Forename - $fname, Contact - $contact";
 } else {
