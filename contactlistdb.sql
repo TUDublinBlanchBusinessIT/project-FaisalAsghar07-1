@@ -1,10 +1,11 @@
-DROP DATABASE IF EXISTS contactlist;
-CREATE DATABASE contactlist;
-USE contactlist;
+create database crud_db;
 
-CREATE TABLE contacts (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    surname VARCHAR(30),
-    forename VARCHAR(30),
-    contact VARCHAR(30)
+use crud_db;
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(100),
+  `email` varchar(100),
+  `mobile` varchar(15),
+  PRIMARY KEY  (`id`)
 );
