@@ -9,7 +9,7 @@
 <body>
 
 	<div class="container mt-5">
-		<a href="index.php" class="btn btn-primary">Go to Home</a>
+		<a href="form.php" class="btn btn-primary">Go to Home</a>
 		<br/><br/>
 
 		<form action="add.php" method="post" name="form1">
@@ -42,7 +42,7 @@
 			$result = mysqli_query($mysqli, "INSERT INTO users(name,email,mobile) VALUES('$name','$email','$mobile')");
 			
 			// Show message when user added
-			echo "<p class='mt-3 alert alert-success'>User added successfully. <a href='index.php'>View Users</a></p>";
+			echo "<p class='mt-3 alert alert-success'>User added successfully. <a href='form.php'>View Users</a></p>";
 		}
 		?>
 	</div>
