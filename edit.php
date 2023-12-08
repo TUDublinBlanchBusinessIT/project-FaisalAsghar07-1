@@ -11,5 +11,15 @@ $id = $_POST['id'];
 	
 	// Redirect to homepage to display updated user in list
 	header("Location: form.php");
-    exit();
+    
+?>
+<?php
+$id = $_GET['id'];
+$result = mysqli_query($mysqli, "SELECT * FROM users WHERE id=$id");
+while($user_data = mysqli_fetch_array($result))
+{
+	$name = $user_data['name'];
+	$email = $user_data['email'];
+	$mobile = $user_data['mobile'];
+}
 ?>
